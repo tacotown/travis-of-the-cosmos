@@ -16,7 +16,7 @@ before_script:
 script:
   - cat server.js
   - docker --version # print the version for logging
-  - docker build -t travis-of-the-cosmos .
+  - docker build -t travis-of-the-cosmos --build-arg GAME_SHOW_HOST=${GAME_SHOW_HOST} .
   - docker tag travis-of-the-cosmos mjenison/travis-of-the-cosmos:latest
 
 after_success:
