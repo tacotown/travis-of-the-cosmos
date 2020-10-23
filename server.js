@@ -6,7 +6,7 @@ function sleep(ms) {
 async function main() {
   const host = process.env.HOST;
   while(true) {
-    console.log("Suck it, ${host}!");
+    console.log(`Suck it, ${host}!`);
     await sleep(5000);
   }
 }
